@@ -1,1 +1,1 @@
-void multiplication(double **matrix, double *vector, int n, int m, double *result);
+void matrix_vector_multiply(double* matrix, double* vector, double* result, int matrix_size);
