@@ -1,4 +1,5 @@
 //Salimhan KIZILIRMAK 19050111055
+//An introduction to the mpi library and parallel programming. We measured the durations by increasing the number of threads with mpi.
 #include <numbermake.h>
 #include <stdio.h>
 #include <stdlib.h>
