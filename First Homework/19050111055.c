@@ -1,3 +1,4 @@
+//Salimhan KIZILIRMAK 19050111055
 #include <numbermake.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -18,7 +19,7 @@ int main(int argc, char** argv) {
     double* result;
     int matrix_size;
 
-    MPI_Init(&argc, &argv);
+    MPI_Init(&argc, &argv);//MPI_Init initializes the MPI environment. MPI_Comm_rank gets the rank of the current process, and MPI_Comm_size gets the total number of processes.
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
@@ -35,7 +36,7 @@ int main(int argc, char** argv) {
         }
     }
 
-    MPI_Bcast(&matrix_size, 1, MPI_INT, 0, MPI_COMM_WORLD);
+    MPI_Bcast(&matrix_size, 1, MPI_INT, 0, MPI_COMM_WORLD);//MPI_Bcast broadcasts the value of matrix_size from process 0 to all other processes. If the current process has a rank other than 0, vector and result are initialized.
     if (rank != 0) {
         vector = (double*) malloc(matrix_size * sizeof(double));
         result = (double*) malloc(matrix_size * sizeof(double));
